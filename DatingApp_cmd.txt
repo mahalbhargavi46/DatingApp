@@ -1,0 +1,694 @@
+
+C:\Users\hp\DatingApp>cd..
+
+C:\Users\hp>cd..
+
+C:\Users>cd..
+
+C:\>npm -version
+6.14.6
+
+C:\>node -version
+node: bad option: -version
+
+C:\>node --version
+v12.18.4
+
+C:\>mkdir DatingApp
+
+C:\>cd DatingApp
+
+C:\DatingApp>dotnet -h
+.NET Core SDK (3.0.100)
+Usage: dotnet [runtime-options] [path-to-application] [arguments]
+
+Execute a .NET Core application.
+
+runtime-options:
+  --additionalprobingpath <path>   Path containing probing policy and assemblies to probe for.
+  --additional-deps <path>         Path to additional deps.json file.
+  --fx-version <version>           Version of the installed Shared Framework to use to run the application.
+  --roll-forward <setting>         Roll forward to framework version  (LatestPatch, Minor, LatestMinor, Major, LatestMajor, Disable).
+
+path-to-application:
+  The path to an application .dll file to execute.
+
+Usage: dotnet [sdk-options] [command] [command-options] [arguments]
+
+Execute a .NET Core SDK command.
+
+sdk-options:
+  -d|--diagnostics  Enable diagnostic output.
+  -h|--help         Show command line help.
+  --info            Display .NET Core information.
+  --list-runtimes   Display the installed runtimes.
+  --list-sdks       Display the installed SDKs.
+  --version         Display .NET Core SDK version in use.
+
+SDK commands:
+  add               Add a package or reference to a .NET project.
+  build             Build a .NET project.
+  build-server      Interact with servers started by a build.
+  clean             Clean build outputs of a .NET project.
+  help              Show command line help.
+  list              List project references of a .NET project.
+  msbuild           Run Microsoft Build Engine (MSBuild) commands.
+  new               Create a new .NET project or file.
+  nuget             Provides additional NuGet commands.
+  pack              Create a NuGet package.
+  publish           Publish a .NET project for deployment.
+  remove            Remove a package or reference from a .NET project.
+  restore           Restore dependencies specified in a .NET project.
+  run               Build and run a .NET project output.
+  sln               Modify Visual Studio solution files.
+  store             Store the specified assemblies in the runtime package store.
+  test              Run unit tests using the test runner specified in a .NET project.
+  tool              Install or manage tools that extend the .NET experience.
+  vstest            Run Microsoft Test Engine (VSTest) commands.
+
+Additional commands from bundled tools:
+  dev-certs         Create and manage development certificates.
+  fsi               Start F# Interactive / execute F# scripts.
+  sql-cache         SQL Server cache command-line tools.
+  user-secrets      Manage development user secrets.
+  watch             Start a file watcher that runs a command when files change.
+
+Run 'dotnet [command] --help' for more information on a command.
+
+C:\DatingApp>dotnet new -h
+
+Welcome to .NET Core 3.0!
+---------------------
+SDK Version: 3.0.100
+
+Telemetry
+---------
+The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous. It is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPT
+OUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+
+----------------
+Explore documentation: https://aka.ms/dotnet-docs
+Report issues and find source on GitHub: https://github.com/dotnet/core
+Find out what's new: https://aka.ms/dotnet-whats-new
+Learn about the installed HTTPS developer cert: https://aka.ms/aspnet-core-https
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
+Write your first app: https://aka.ms/first-net-core-app
+--------------------------------------------------------------------------------------
+Getting ready...
+Usage: new [options]
+
+Options:
+  -h, --help          Displays help for this command.
+  -l, --list          Lists templates containing the specified name. If no name is specified, lists all templates.
+  -n, --name          The name for the output being created. If no name is specified, the name of the current directory is used.
+  -o, --output        Location to place the generated output.
+  -i, --install       Installs a source or a template pack.
+  -u, --uninstall     Uninstalls a source or a template pack.
+  --nuget-source      Specifies a NuGet source to use during install.
+  --type              Filters templates based on available types. Predefined values are "project", "item" or "other".
+  --dry-run           Displays a summary of what would happen if the given command line were run if it would result in a template creation.
+  --force             Forces content to be generated even if it would change existing files.
+  -lang, --language   Filters templates based on language and specifies the language of the template to create.
+  --update-check      Check the currently installed template packs for updates.
+  --update-apply      Check the currently installed template packs for update, and install the updates.
+
+
+Templates                                         Short Name               Language          Tags
+----------------------------------------------------------------------------------------------------------------------------------
+Console Application                               console                  [C#], F#, VB      Common/Console
+Class library                                     classlib                 [C#], F#, VB      Common/Library
+WPF Application                                   wpf                      [C#]              Common/WPF
+WPF Class library                                 wpflib                   [C#]              Common/WPF
+WPF Custom Control Library                        wpfcustomcontrollib      [C#]              Common/WPF
+WPF User Control Library                          wpfusercontrollib        [C#]              Common/WPF
+Windows Forms (WinForms) Application              winforms                 [C#]              Common/WinForms
+Windows Forms (WinForms) Class library            winformslib              [C#]              Common/WinForms
+Worker Service                                    worker                   [C#]              Common/Worker/Web
+Unit Test Project                                 mstest                   [C#], F#, VB      Test/MSTest
+NUnit 3 Test Project                              nunit                    [C#], F#, VB      Test/NUnit
+NUnit 3 Test Item                                 nunit-test               [C#], F#, VB      Test/NUnit
+xUnit Test Project                                xunit                    [C#], F#, VB      Test/xUnit
+Razor Component                                   razorcomponent           [C#]              Web/ASP.NET
+Razor Page                                        page                     [C#]              Web/ASP.NET
+MVC ViewImports                                   viewimports              [C#]              Web/ASP.NET
+MVC ViewStart                                     viewstart                [C#]              Web/ASP.NET
+Blazor Server App                                 blazorserver             [C#]              Web/Blazor
+ASP.NET Core Empty                                web                      [C#], F#          Web/Empty
+ASP.NET Core Web App (Model-View-Controller)      mvc                      [C#], F#          Web/MVC
+ASP.NET Core Web App                              webapp                   [C#]              Web/MVC/Razor Pages
+ASP.NET Core with Angular                         angular                  [C#]              Web/MVC/SPA
+ASP.NET Core with React.js                        react                    [C#]              Web/MVC/SPA
+ASP.NET Core with React.js and Redux              reactredux               [C#]              Web/MVC/SPA
+Razor Class Library                               razorclasslib            [C#]              Web/Razor/Library/Razor Class Library
+ASP.NET Core Web API                              webapi                   [C#], F#          Web/WebAPI
+ASP.NET Core gRPC Service                         grpc                     [C#]              Web/gRPC
+dotnet gitignore file                             gitignore                                  Config
+global.json file                                  globaljson                                 Config
+NuGet Config                                      nugetconfig                                Config
+Dotnet local tool manifest file                   tool-manifest                              Config
+Web Config                                        webconfig                                  Config
+Solution File                                     sln                                        Solution
+Protocol Buffer File                              proto                                      Web/gRPC
+
+Examples:
+    dotnet new mvc --auth Individual
+    dotnet new gitignore
+    dotnet new --help
+
+C:\DatingApp>dotnet new webapi -h
+Usage: new [options]
+
+Options:
+  -h, --help          Displays help for this command.
+  -l, --list          Lists templates containing the specified name. If no name is specified, lists all templates.
+  -n, --name          The name for the output being created. If no name is specified, the name of the current directory is used.
+  -o, --output        Location to place the generated output.
+  -i, --install       Installs a source or a template pack.
+  -u, --uninstall     Uninstalls a source or a template pack.
+  --nuget-source      Specifies a NuGet source to use during install.
+  --type              Filters templates based on available types. Predefined values are "project", "item" or "other".
+  --dry-run           Displays a summary of what would happen if the given command line were run if it would result in a template creation.
+  --force             Forces content to be generated even if it would change existing files.
+  -lang, --language   Filters templates based on language and specifies the language of the template to create.
+  --update-check      Check the currently installed template packs for updates.
+  --update-apply      Check the currently installed template packs for update, and install the updates.
+
+
+ASP.NET Core Web API (C#)
+Author: Microsoft
+Description: A project template for creating an ASP.NET Core application with an example Controller for a RESTful HTTP service. This template can also be used for ASP.NET Core MVC Views and Controllers.
+Options:
+  -au|--auth                 The type of authentication to use
+                                 None             - No authentication
+                                 IndividualB2C    - Individual authentication with Azure AD B2C
+                                 SingleOrg        - Organizational authentication for a single tenant
+                                 Windows          - Windows authentication
+                             Default: None
+
+  --aad-b2c-instance         The Azure Active Directory B2C instance to connect to (use with IndividualB2C auth).
+                             string - Optional
+                             Default: https://login.microsoftonline.com/tfp/
+
+  -ssp|--susi-policy-id      The sign-in and sign-up policy ID for this project (use with IndividualB2C auth).
+                             string - Optional
+
+  --aad-instance             The Azure Active Directory instance to connect to (use with SingleOrg auth).
+                             string - Optional
+                             Default: https://login.microsoftonline.com/
+
+  --client-id                The Client ID for this project (use with SingleOrg or IndividualB2C auth).
+                             string - Optional
+                             Default: 11111111-1111-1111-11111111111111111
+
+  --domain                   The domain for the directory tenant (use with SingleOrg or IndividualB2C auth).
+                             string - Optional
+                             Default: qualified.domain.name
+
+  --tenant-id                The TenantId ID of the directory to connect to (use with SingleOrg auth).
+                             string - Optional
+                             Default: 22222222-2222-2222-2222-222222222222
+
+  -r|--org-read-access       Whether or not to allow this application read access to the directory (only applies to SingleOrg auth).
+                             bool - Optional
+                             Default: false / (*) true
+
+  --exclude-launch-settings  Whether to exclude launchSettings.json in the generated template.
+                             bool - Optional
+                             Default: false / (*) true
+
+  --no-https                 Whether to turn off HTTPS. This option only applies if Individual, IndividualB2C, SingleOrg, or MultiOrg aren't used for --auth.
+                             bool - Optional
+                             Default: false / (*) true
+
+  -uld|--use-local-db        Whether to use LocalDB instead of SQLite. This option only applies if --auth Individual or --auth IndividualB2C is specified.
+                             bool - Optional
+                             Default: false / (*) true
+
+  --no-restore               If specified, skips the automatic restore of the project on create.
+                             bool - Optional
+                             Default: false / (*) true
+
+
+* Indicates the value used if the switch is provided without a value.
+
+C:\DatingApp>dotnet new webapi -n DatingApp.API
+The template "ASP.NET Core Web API" was created successfully.
+
+Processing post-creation actions...
+Running 'dotnet restore' on DatingApp.API\DatingApp.API.csproj...
+  Restore completed in 163.53 ms for C:\DatingApp\DatingApp.API\DatingApp.API.csproj.
+
+Restore succeeded.
+
+
+An update for template pack Microsoft.DotNet.Web.ProjectTemplates.3.0::3.0.0 is available.
+    install command: dotnet new -i Microsoft.DotNet.Web.ProjectTemplates.3.0::3.0.1
+
+C:\DatingApp>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+Notes 
+Creating a Database & retrieving values from the database
+=> Creating models based on the values.
+=> Create the database using model first or code first approach.
+=> Create a class that represents the value and then using entity framework code first migrations.
+=> It is gonna allow us to scaffold our database and it is going to create a database and store our values.
+
+appsettings.Development.json is used when we are in Development Mode and appsettings.json is used when we are in Development mode or Production mode.   
+
+// Date => Sept 28th 2020
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\DatingApp>cd DatingApp.API
+
+C:\DatingApp\DatingApp.API>dotnet tool install --global dotnet-ef
+Tool 'dotnet-ef' is already installed.
+
+C:\DatingApp\DatingApp.API>dotnet ef -h
+Entity Framework Core .NET Command-line Tools 3.0.0
+
+Usage: dotnet ef [options] [command]
+
+Options:
+  --version        Show version information
+  -h|--help        Show help information
+  -v|--verbose     Show verbose output.
+  --no-color       Don't colorize output.
+  --prefix-output  Prefix output with level.
+
+Commands:
+  database    Commands to manage the database.
+  dbcontext   Commands to manage DbContext types.
+  migrations  Commands to manage migrations.
+
+Use "dotnet ef [command] --help" for more information about a command.
+
+C:\DatingApp\DatingApp.API>dotnet ef migrations
+
+
+Usage: dotnet ef migrations [options] [command]
+
+Options:
+  -h|--help        Show help information
+  -v|--verbose     Show verbose output.
+  --no-color       Don't colorize output.
+  --prefix-output  Prefix output with level.
+
+Commands:
+  add     Adds a new migration.
+  list    Lists available migrations.
+  remove  Removes the last migration.
+  script  Generates a SQL script from migrations.
+
+Use "migrations [command] --help" for more information about a command.
+
+C:\DatingApp\DatingApp.API>dotnet ef migrations add InitialCreate
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+Done. To undo this action, use 'ef migrations remove'
+
+C:\DatingApp\DatingApp.API>dotnet ef migrations list
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+20200928195210_InitialCreate
+
+C:\DatingApp\DatingApp.API>dotnet ef database update
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      PRAGMA journal_mode = 'wal';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+PRAGMA journal_mode = 'wal';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "__EFMigrationsHistory" (
+          "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+          "ProductVersion" TEXT NOT NULL
+      );
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "MigrationId", "ProductVersion"
+      FROM "__EFMigrationsHistory"
+      ORDER BY "MigrationId";
+info: Microsoft.EntityFrameworkCore.Migrations[20402]
+      Applying migration '20200928195210_InitialCreate'.
+Applying migration '20200928195210_InitialCreate'.
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE "Values" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Values" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NULL
+);info
+: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      CREATE TABLE "Values" (
+          "Id" INTEGER NOT NULL CONSTRAINT "PK_Values" PRIMARY KEY AUTOINCREMENT,
+          "Name" TEXT NULL
+      );
+Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20200928195210_InitialCreate', '3.0.0');
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+      VALUES ('20200928195210_InitialCreate', '3.0.0');
+Done.
+
+//03-10-2020
+Microsoft Windows [Version 6.3.9600]
+(c) 2013 Microsoft Corporation. All rights reserved.
+
+C:\DatingApp>cd DatingApp.API
+
+C:\DatingApp\DatingApp.API>notnet watch run
+'notnet' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\DatingApp\DatingApp.API>notnet watch run
+'notnet' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\DatingApp\DatingApp.API>dotnet watch run
+watch : Started
+info: Microsoft.Hosting.Lifetime[0]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\DatingApp\DatingApp.API
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/values
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'DatingApp.API.Controllers.ValuesController.GetValues (DatingApp.API)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[3]
+      Route matched with {action = "GetValues", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetValues() on controller DatingApp.API.Controllers.ValuesController (DatingApp.API).
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "v"."Id", "v"."Name"
+      FROM "Values" AS "v"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatingApp.API.Models.Value, DatingApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[2]
+      Executed action DatingApp.API.Controllers.ValuesController.GetValues (DatingApp.API) in 3326.7902000000004ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'DatingApp.API.Controllers.ValuesController.GetValues (DatingApp.API)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 3713.5717ms 200 application/json; charset=utf-8
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/2
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 3.2997ms 404
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/values/2
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[3]
+      Route matched with {action = "GetValue", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetValue(Int32) on controller DatingApp.API.Controllers.ValuesController (DatingApp.API).
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT "v"."Id", "v"."Name"
+      FROM "Values" AS "v"
+      WHERE ("v"."Id" = @__id_0) AND @__id_0 IS NOT NULL
+      LIMIT 1
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'DatingApp.API.Models.Value'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[2]
+      Executed action DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API) in 436.7312ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 541.815ms 200 application/json; charset=utf-8
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/values/7
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[3]
+      Route matched with {action = "GetValue", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetValue(Int32) on controller DatingApp.API.Controllers.ValuesController (DatingApp.API).
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT "v"."Id", "v"."Name"
+      FROM "Values" AS "v"
+      WHERE ("v"."Id" = @__id_0) AND @__id_0 IS NOT NULL
+      LIMIT 1
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'null'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[2]
+      Executed action DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API) in 48.2603ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 51.1845ms 204
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/values/2
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[3]
+      Route matched with {action = "GetValue", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetValue(Int32) on controller DatingApp.API.Controllers.ValuesController (DatingApp.API).
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT "v"."Id", "v"."Name"
+      FROM "Values" AS "v"
+      WHERE ("v"."Id" = @__id_0) AND @__id_0 IS NOT NULL
+      LIMIT 1
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'DatingApp.API.Models.Value'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[2]
+      Executed action DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API) in 37.1407ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 39.7661ms 200 application/json; charset=utf-8
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/values/6
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[3]
+      Route matched with {action = "GetValue", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetValue(Int32) on controller DatingApp.API.Controllers.ValuesController (DatingApp.API).
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT "v"."Id", "v"."Name"
+      FROM "Values" AS "v"
+      WHERE ("v"."Id" = @__id_0) AND @__id_0 IS NOT NULL
+      LIMIT 1
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'null'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[2]
+      Executed action DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API) in 15.698300000000001ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 18.2242ms 204
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api//6
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 8.3407ms 404
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/6
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 0.9519000000000001ms 404
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/2
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 0.8903000000000001ms 404
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/values/2
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[3]
+      Route matched with {action = "GetValue", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetValue(Int32) on controller DatingApp.API.Controllers.ValuesController (DatingApp.API).
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT "v"."Id", "v"."Name"
+      FROM "Values" AS "v"
+      WHERE ("v"."Id" = @__id_0) AND @__id_0 IS NOT NULL
+      LIMIT 1
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'DatingApp.API.Models.Value'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[2]
+      Executed action DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API) in 219.66140000000001ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 223.3707ms 200 application/json; charset=utf-8
+watch : Exited
+watch : File changed: C:\DatingApp\DatingApp.API\Controllers\ValuesController.cs
+watch : Started
+info: Microsoft.Hosting.Lifetime[0]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\DatingApp\DatingApp.API
+watch : Exited
+watch : File changed: C:\DatingApp\DatingApp.API\Controllers\ValuesController.cs
+watch : Started
+info: Microsoft.Hosting.Lifetime[0]
+      Now listening on: http://localhost:5000
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\DatingApp\DatingApp.API
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/values/
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'DatingApp.API.Controllers.ValuesController.GetValues (DatingApp.API)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[3]
+      Route matched with {action = "GetValues", controller = "Values"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetValues() on controller DatingApp.API.Controllers.ValuesController (DatingApp.API).
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT "v"."Id", "v"."Name"
+      FROM "Values" AS "v"
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[DatingApp.API.Models.Value, DatingApp.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[2]
+      Executed action DatingApp.API.Controllers.ValuesController.GetValues (DatingApp.API) in 1370.5191ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'DatingApp.API.Controllers.ValuesController.GetValues (DatingApp.API)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 1631.5089ms 200 application/json; charset=utf-8
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:5000/api/values/3
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[3]
+      Route matched with {action = "GetValue", controller = "Values"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetValue(Int32) on controller DatingApp.API.Controllers.ValuesController (DatingApp.API).
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.0.0 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20100]
+      Executing DbCommand [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+      SELECT "v"."Id", "v"."Name"
+      FROM "Values" AS "v"
+      WHERE ("v"."Id" = @__id_0) AND @__id_0 IS NOT NULL
+      LIMIT 1
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor[1]
+      Executing ObjectResult, writing value of type 'DatingApp.API.Models.Value'.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[2]
+      Executed action DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API) in 282.97860000000003ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'DatingApp.API.Controllers.ValuesController.GetValue (DatingApp.API)'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished in 329.8021ms 200 application/json; charset=utf-8
+watch : Shutdown requested. Press Ctrl+C again to force exit.
+info: Microsoft.Hosting.Lifetime[0]
+      Application is shutting down...
+watch : Exited
+
+C:\DatingApp\DatingApp.API>npm install -g @angular/cli
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+C:\Users\hp\AppData\Roaming\npm\ng -> C:\Users\hp\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng
+
+> @angular/cli@10.1.4 postinstall C:\Users\hp\AppData\Roaming\npm\node_modules\@angular\cli
+> node ./bin/postinstall/script.js
+
+? Would you like to share anonymous usage data with the Angular Team at Google under
+Google’s Privacy Policy at https://policies.google.com/privacy? For more details and
+how to change this setting, see http://angular.io/analytics. No
++ @angular/cli@10.1.4
+added 277 packages from 207 contributors in 97.325s
+
+C:\DatingApp\DatingApp.API>cd..
+
+C:\DatingApp>ng new DatingApp_FrontEnd
+Project name "DatingApp_FrontEnd" is not valid. New project names must start with a letter, and must contain only alphanumeric characters or dashes. When adding a dash the segment after the dash must also start with a letter.
+DatingApp_FrontEnd
+^
+
+C:\DatingApp>ng new DatingApp-FrontEnd
+? Would you like to add Angular routing? No
+? Which stylesheet format would you like to use? CSS
+CREATE DatingApp-FrontEnd/angular.json (3662 bytes)
+CREATE DatingApp-FrontEnd/package.json (1263 bytes)
+CREATE DatingApp-FrontEnd/README.md (1035 bytes)
+CREATE DatingApp-FrontEnd/tsconfig.json (458 bytes)
+CREATE DatingApp-FrontEnd/tslint.json (3185 bytes)
+CREATE DatingApp-FrontEnd/.editorconfig (274 bytes)
+CREATE DatingApp-FrontEnd/.gitignore (631 bytes)
+CREATE DatingApp-FrontEnd/.browserslistrc (853 bytes)
+CREATE DatingApp-FrontEnd/karma.conf.js (1030 bytes)
+CREATE DatingApp-FrontEnd/tsconfig.app.json (287 bytes)
+CREATE DatingApp-FrontEnd/tsconfig.spec.json (333 bytes)
+CREATE DatingApp-FrontEnd/src/favicon.ico (948 bytes)
+CREATE DatingApp-FrontEnd/src/index.html (303 bytes)
+CREATE DatingApp-FrontEnd/src/main.ts (372 bytes)
+CREATE DatingApp-FrontEnd/src/polyfills.ts (2835 bytes)
+CREATE DatingApp-FrontEnd/src/styles.css (80 bytes)
+CREATE DatingApp-FrontEnd/src/test.ts (753 bytes)
+CREATE DatingApp-FrontEnd/src/assets/.gitkeep (0 bytes)
+CREATE DatingApp-FrontEnd/src/environments/environment.prod.ts (51 bytes)
+CREATE DatingApp-FrontEnd/src/environments/environment.ts (662 bytes)
+CREATE DatingApp-FrontEnd/src/app/app.module.ts (314 bytes)
+CREATE DatingApp-FrontEnd/src/app/app.component.html (25725 bytes)
+CREATE DatingApp-FrontEnd/src/app/app.component.spec.ts (976 bytes)
+CREATE DatingApp-FrontEnd/src/app/app.component.ts (222 bytes)
+CREATE DatingApp-FrontEnd/src/app/app.component.css (0 bytes)
+CREATE DatingApp-FrontEnd/e2e/protractor.conf.js (869 bytes)
+CREATE DatingApp-FrontEnd/e2e/tsconfig.json (294 bytes)
+CREATE DatingApp-FrontEnd/e2e/src/app.e2e-spec.ts (651 bytes)
+CREATE DatingApp-FrontEnd/e2e/src/app.po.ts (301 bytes)
+√ Packages installed successfully.
+'git' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\DatingApp>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\DatingApp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
