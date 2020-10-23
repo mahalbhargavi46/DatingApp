@@ -24,7 +24,7 @@ export class NavComponent implements OnInit {
       console.log('logged in successfully');
     // tslint:disable-next-line: no-shadowed-variable
     }, error => {
-      console.log('Failed to login');
+      console.log(error);
     });
     // console.log(this.model);
   }
