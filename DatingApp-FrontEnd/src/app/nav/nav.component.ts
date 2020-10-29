@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { error } from 'protractor';
+import { AlertifyService } from '../_services/alertify.service';
 import { AuthService } from '../_services/auth.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class NavComponent implements OnInit {
 
   model: any = {};
 
-  constructor(private authService: AuthService) { }
+  constructor(public authService: AuthService, private altertify: AlertifyService) { }
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
@@ -21,26 +22,30 @@ export class NavComponent implements OnInit {
   login(){
 
     this.authService.login(this.model).subscribe(next => {
-      console.log('logged in successfully');
+      this.altertify.success('Logged in Successfully');
+      // console.log('logged in successfully');
     // tslint:disable-next-line: no-shadowed-variable
     }, error => {
-      console.log(error);
+      this.altertify.error(error);
+      // console.log(error);
     });
     // console.log(this.model);
   }
 
   // tslint:disable-next-line: typedef
   loggedIn(){
-    const token = localStorage.getItem('token');
-    // '!!' isa short cut method for simple true or false statements.
-    // returns true if this token variable contains a token and returns false if it is empty
-    return !!token;
+    // const token = localStorage.getItem('token');
+    // // '!!' is a short cut method for simple true or false statements.
+    // // returns true if this token variable contains a token and returns false if it is empty
+    // return !!token;
+    // the above method and the below method is same but in this case our token is being checked for casualties.
+    return this.authService.loggedIn();
   }
-
   // tslint:disable-next-line: typedef
   logout(){
     localStorage.removeItem('token');
-    console.log('logged out');
+    this.altertify.message('Logged out Successfully');
+    // console.log('logged out');
   }
 
 }
