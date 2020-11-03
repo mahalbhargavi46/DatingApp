@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { error } from 'protractor';
 import { AlertifyService } from '../_services/alertify.service';
 import { AuthService } from '../_services/auth.service';
@@ -12,7 +13,7 @@ export class NavComponent implements OnInit {
 
   model: any = {};
 
-  constructor(public authService: AuthService, private altertify: AlertifyService) { }
+  constructor(public authService: AuthService, private altertify: AlertifyService, private router: Router) { }
 
   // tslint:disable-next-line: typedef
   ngOnInit() {
@@ -28,6 +29,9 @@ export class NavComponent implements OnInit {
     }, error => {
       this.altertify.error(error);
       // console.log(error);
+    }, () => {
+      // when the user is logged in he is redirected to the matches page
+      this.router.navigate(['./members']);
     });
     // console.log(this.model);
   }
@@ -45,6 +49,7 @@ export class NavComponent implements OnInit {
   logout(){
     localStorage.removeItem('token');
     this.altertify.message('Logged out Successfully');
+    this.router.navigate(['./home']);
     // console.log('logged out');
   }
 
