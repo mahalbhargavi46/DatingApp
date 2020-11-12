@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using DatingApp.API.Data;
 using DatingApp.API.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -35,15 +36,21 @@ namespace DatingApp.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddControllers();
+            //the below code ignores the self referencing loop 
+            services.AddControllers().AddNewtonsoftJson(opt => 
+            {
+                opt.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
             //adding CORS as a service and this is gonna make CORS service available so that we can use it as a middleware 
             services.AddCors();
+            services.AddAutoMapper(typeof(DatingRepository).Assembly);
             
             //Singleton would mean that we can create single instance of our repository throughout the application.It creates the instance for the first time and re-uses the same instance throughout the application.
             //Transient is used for lightweight stateless services. This is efficient because these are created each time a request for repository is made.
             //Scoped is used in our project because it is created once per request 
             //In order to make use of this, we are going to inject our repositories.
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {
                     options.TokenValidationParameters = new TokenValidationParameters
@@ -78,7 +85,6 @@ namespace DatingApp.API
                         }
                     });
                 });
-
             }
 
             // app.UseHttpsRedirection();
